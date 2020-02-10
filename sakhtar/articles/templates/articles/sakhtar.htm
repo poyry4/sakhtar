@@ -1,0 +1,79 @@
+{% extends 'new.htm' %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+
+<div class="col-lg-4 col-md-4 col-sm-4 mb">
+    <div class="product-panel-2 pn">
+      <img src="{% static 'img/members256.png' %}" width="200" alt=""><br>
+      <a href="{% url 'members:members_katebi' %}"><button class="btn btn-small btn-theme04">Members</button></a>
+    </div>
+  </div>
+
+ 
+
+<div class="col-lg-4 col-md-4 col-sm-4 mb">
+    <div class="product-panel-2 pn">
+      <img src="{% static 'img/reports256.png' %}" width="200" alt=""><br>
+      <a href="{% url 'reports:reports' %}"><button class="btn btn-small btn-theme04">Reports</button></a>
+    </div>
+  </div>
+
+
+    <div class="col-lg-4 col-md-4 col-sm-4 mb">
+        <div class="product-panel-2 pn">
+          <img src="{% static 'img/articles256.png' %}" width="200" alt=""><br>
+          <a href="{% url 'maghalat:maghalat' %}"><button class="btn btn-small btn-theme04">Articles</button></a>
+        </div>
+      </div>
+      
+    <div class="col-lg-4 col-md-4 col-sm-4 mb">
+        <div class="product-panel-2 pn">
+          <img src="{% static 'img/schedule256.png' %}" width="200" alt=""><br>
+          <a href="{% url 'schedule:schedule' %}"><button class="btn btn-small btn-theme04">Schedule</button></a>
+        </div>
+      </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4 mb">
+        <div class="product-panel-2 pn">
+          <img src="{% static 'img/leaflets256.png' %}" width="200" alt=""><br>
+          <a href="{% url 'leaflets:leaflets' %}"><button class="btn btn-small btn-theme04">Leaflets</button></a>
+        </div>
+      </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4 mb">
+        <div class="product-panel-2 pn">
+          <img src="{% static 'img/presentation256.png' %}" width="200" alt=""><br>
+          <a href="{% url 'presentations:presentations' %}"><button class="btn btn-small btn-theme04">Presentations</button></a>
+        </div>
+      </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4 mb">
+        <div class="product-panel-2 pn">
+          <img src="{% static 'img/tutorial2561.png' %}" width="200" alt=""><br>
+          <a href="{% url 'tutorial:tutorial' %}"><button class="btn btn-small btn-theme04">Tutorial</button></a>
+        </div>
+      </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4 mb">
+        <div class="product-panel-2 pn">
+          <img src="{% static 'img/database256.png' %}" width="200" alt=""><br>
+          <a href="{% url 'database:database' %}"><button class="btn btn-small btn-theme04">Database</button></a>
+        </div>
+      </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4 mb">
+        <div class="product-panel-2 pn">
+          <img src="{% static 'img/robot1256.png' %}" width="200" alt=""><br>
+          <button class="btn btn-small btn-theme04">Robot</button>
+        </div>
+      </div>
+    </div>
+
+    {% endblock %}
+    
+    <script src="/static/slugify.js"></script>

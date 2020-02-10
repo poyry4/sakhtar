@@ -1,0 +1,41 @@
+{% extends 'base.htm' %}
+{% block title %}login{% endblock %}
+{% block content %}
+<body class="img-responsive" style="background-color: black; background-image: url('/static/kharazmi.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: right; ">
+<br><br><br><br>
+<form role="form" class="form-horizontal" method="post" action="" style="background-color: transparent;">{% csrf_token %}
+    
+        {% for field in form %}
+        <div class="row">
+            <div class="col-xs-1 col-md-1"></div>
+            <div class="col-xs-2 col-md-2">
+                {% if field.html_name == 'password' %}
+                <input style="background-color: transparent;" class="form-control" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}"
+                type="password" placeholder="{{ field.html_name }}" />
+            {{ field.errors }} 
+            {% else %}
+                <input style="background-color: transparent;" class="form-control" id="{{ field.id_for_label }}" maxlength="30" name="{{ field.html_name }}"
+                   type="text" placeholder="{{ field.html_name }}" />
+                {{ field.errors }} 
+                {% endif %}
+
+            </div>
+
+        </div>
+        <br>
+        {% endfor %}
+        <div class="row">
+            <div class="col-xs-1 col-md-2"></div>
+            <div class="col-xs-2 col-md-2">
+                <button type="submit" class="btn btn-outline-dark">login</button>
+          <img class="card-img-top" src="holder.js/100px180/" alt="">
+          <div class="card-body">
+          </div>
+        </div> 
+        </div>
+        </div>
+        <input type="hidden" name="next" value="{{ next }}" />
+        
+</form>
+
+{% endblock %}
